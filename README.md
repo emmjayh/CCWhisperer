@@ -2,6 +2,8 @@
 
 AI-powered code change explanations for Claude Code sessions. Automatically generates human-readable explanations of file changes using local Ollama models.
 
+<img width="1251" height="492" alt="image" src="https://github.com/user-attachments/assets/acb6325b-fe73-4b15-88c3-64aa873cb810" />
+
 ![diffwhisperer](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
@@ -9,6 +11,7 @@ AI-powered code change explanations for Claude Code sessions. Automatically gene
 
 - **Automatic Explanations**: Intercepts file edits (Write, Edit, MultiEdit) and generates explanations
 - **Multiple Tones**: Choose between ELI5, Standard, or Developer-focused explanations
+
 - **Web Dashboard**: View explanations in a modern dark-themed web interface
 - **Regenerate**: Re-generate explanations in different tones with one click
 - **Filter by Mode**: View only explanations from a specific tone
