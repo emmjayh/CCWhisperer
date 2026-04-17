@@ -1,4 +1,5 @@
-# CCWhisperer
+# CCWhisperer  <img width="1024" height="1024" alt="Default_Here_is_a_design_concept_for_CCWhispererThis_icon_inco_0_49ce1859-55a1-4022-bb9b-b3ff1336a98d_0" src="https://github.com/user-attachments/assets/9c0a062f-403d-4296-bdf5-9df1059f98fc" />
+
 
 AI-powered code change explanations for Claude Code sessions. Automatically generates human-readable explanations of file changes using local Ollama models.
 
