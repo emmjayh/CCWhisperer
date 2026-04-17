@@ -47,8 +47,8 @@ AI-powered code change explanations for Claude Code sessions. Automatically gene
 ### 1. Clone or copy the project
 
 ```bash
-git clone https://github.com/CCWhisperer/diffwhisperer.git
-cd diffwhisperer
+git clone https://github.com/CCWhisperer/CCWhisperer.git
+cd CCWhisperer
 ```
 
 Or just copy `diffwhisperer.py` and `viewer.py` to your desired location.
