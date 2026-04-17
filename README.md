@@ -1,10 +1,10 @@
-# diffwhisperer
+# CCWhisperer
 
 AI-powered code change explanations for Claude Code sessions. Automatically generates human-readable explanations of file changes using local Ollama models.
 
 <img width="1251" height="492" alt="image" src="https://github.com/user-attachments/assets/acb6325b-fe73-4b15-88c3-64aa873cb810" />
 
-![diffwhisperer](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![CCWhisperer](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## Features
@@ -51,14 +51,14 @@ git clone https://github.com/CCWhisperer/CCWhisperer.git
 cd CCWhisperer
 ```
 
-Or just copy `diffwhisperer.py` and `viewer.py` to your desired location.
+Or just copy `CCWhisperer.py` and `viewer.py` to your desired location.
 
 ### 2. Install the Claude Code Hook
 
 Run this command **in your project directory** where you want explanations:
 
 ```bash
-python diffwhisperer.py --install
+python CCWhisperer.py --install
 ```
 
 This creates a `.claude/settings.json` file with the hook configuration.
@@ -98,14 +98,14 @@ This opens http://localhost:8080 in your browser.
 Print explanations to terminal:
 
 ```bash
-python diffwhisperer.py --log
+python CCWhisperer.py --log
 ```
 
 ## Configuration
 
 ### Changing the Model
 
-Edit the `OLLAMA_MODEL` in `diffwhisperer.py`:
+Edit the `OLLAMA_MODEL` in `CCWhisperer.py`:
 
 ```python
 OLLAMA_MODEL = "qwen3:8b"  # Change to your preferred model
@@ -114,12 +114,12 @@ OLLAMA_MODEL = "qwen3:8b"  # Change to your preferred model
 Or override at runtime:
 
 ```bash
-python diffwhisperer.py --model llama3.2:latest
+python CCWhisperer.py --model llama3.2:latest
 ```
 
 ### Changing Default Tone
 
-The default tone is set in `~/.diffwhisperer/config.json`:
+The default tone is set in `~/.CCWhisperer/config.json`:
 
 ```json
 {"mode": "eli5"}
@@ -138,8 +138,8 @@ OLLAMA_HOST = "http://192.168.1.100:11434"
 ## Project Structure
 
 ```
-diffwhisperer/
-├── diffwhisperer.py   # Main hook script
+CCWhisperer/
+├── CCWhisperer.py   # Main hook script
 ├── viewer.py          # Web dashboard
 ├── .gitignore
 └── README.md
@@ -169,7 +169,7 @@ diffwhisperer/
 
 ### Viewer shows no entries
 
-- Check the log file location: `~/.diffwhisperer/` or temp directory
+- Check the log file location: `~/.CCWhisperer/` or temp directory
 - Verify hook is generating explanations (check Claude Code stderr)
 - Try making a small edit and watching the viewer
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-diffwhisperer - Claude Code change explainer tool
+CCWhisperer - Claude Code change explainer tool
 Runs as a PostToolUse hook to explain file changes using Ollama
 """
 
@@ -96,10 +96,10 @@ def call_ollama(prompt, model, mode):
             result = json.loads(response.read().decode("utf-8"))
             return result.get("response", "").strip()
     except URLError as e:
-        print(f"diffwhisperer: Ollama unreachable ({e})", file=sys.stderr)
+        print(f"CCWhisperer: Ollama unreachable ({e})", file=sys.stderr)
         return None
     except Exception as e:
-        print(f"diffwhisperer: Error calling Ollama ({e})", file=sys.stderr)
+        print(f"CCWhisperer: Error calling Ollama ({e})", file=sys.stderr)
         return None
 
 
@@ -116,7 +116,7 @@ def append_to_session_log(filename, explanation, diff, mode):
         with open(log_path, "a", encoding="utf-8") as f:
             f.write(entry)
     except Exception as e:
-        print(f"diffwhisperer: Could not write session log ({e})", file=sys.stderr)
+        print(f"CCWhisperer: Could not write session log ({e})", file=sys.stderr)
 
 
 def print_session_log():
@@ -142,7 +142,7 @@ def print_explanation(filename, mode, explanation):
         file=sys.stderr,
     )
     print(
-        f"{separator_color}💬 diffwhisperer · {mode} · {filename_color}{filename}{reset}{separator_color}",
+        f"{separator_color}💬 CCWhisperer · {mode} · {filename_color}{filename}{reset}{separator_color}",
         file=sys.stderr,
     )
     print(
@@ -253,7 +253,7 @@ def main():
         print_explanation(filename, get_explanation_mode(), explanation)
         append_to_session_log(filename, explanation, diff, get_explanation_mode())
     else:
-        print("diffwhisperer: Could not generate explanation", file=sys.stderr)
+        print("CCWhisperer: Could not generate explanation", file=sys.stderr)
 
 
 if __name__ == "__main__":

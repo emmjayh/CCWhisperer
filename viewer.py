@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-diffwhisperer viewer - Web frontend for viewing diff explanations
+CCWhisperer viewer - Web frontend for viewing diff explanations
 """
 
 import http.server
@@ -152,7 +152,7 @@ HTML = """<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>diffwhisperer</title>
+<title>CCWhisperer</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#1e1e2e;color:#cdd6f4;padding:2rem}
@@ -191,7 +191,7 @@ summary:hover{color:#cdd6f4}
 </head>
 <body>
 <div class="header">
-  <h1>diffwhisperer</h1>
+  <h1>CCWhisperer</h1>
   <div class="mode-selector">
     <button class="mode-btn" data-filter="all">All</button>
     <button class="mode-btn" data-filter="eli5">ELI5</button>

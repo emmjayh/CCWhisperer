@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(head:*)",
+      "Bash(curl:*)",
+      "Bash(cd:*)",
+      "Bash(gh repo:*)"
+    ]
+  }
+}
